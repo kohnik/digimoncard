@@ -1,0 +1,118 @@
+.other {
+  .wr-section {
+    max-width: 1300px;
+    @include media-custom-down(1279px) {
+      max-width: 1065px;
+    }
+    @include media-laptop-down {
+      max-width: 765px;
+    }
+    @include media-tablet-down {
+      padding: 0 24px;
+      max-width: 460px;
+    }
+  }
+
+  &__text {
+    font-family: $font-Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    color: $color-title;
+  }
+  &__title {
+    font-family: $font-Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 36px;
+    letter-spacing: 0.03em;
+    color: $color-title;
+    margin-bottom: 24px;
+  }
+  &__item {
+    margin-bottom: 24px;
+  }
+  //&__container > *:not(:last-child) {
+  //  margin-right: 16px;
+  //}
+  &__container {
+    //display: grid;
+    //grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    //grid-gap: 12px;
+    //grid-auto-flow: dense;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    min-height: 260px;
+    background-color: $color-block-background;
+    border-radius: 16px;
+    padding: 24px 24px 0px 24px;
+
+    @include media-laptop-down {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      grid-column-gap: 12px;
+      grid-row-gap: 25px;
+      grid-auto-flow: dense;
+    }
+    @include media-tablet-down {
+      padding: 21px 18px 16px;
+    }
+  }
+
+  &__img {
+    border-radius: 16px;
+    margin-bottom: 6px;
+    @include media-custom-down(1075px) {
+      height: 180px;
+    }
+    @include media-tablet-down {
+      height: 175px;
+    }
+  }
+  &__line {
+    height: 0;
+    left: 72px;
+    top: 664px;
+    border: 1px solid $color-line;
+    margin: 48px 0 64px 0;
+  }
+  &__link {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @include media-mobile-down {
+    .wr-section {
+      max-width: 357px;
+    }
+    &__title {
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 27px;
+    }
+    &__text {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 18px;
+    }
+    &__container {
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: 16px;
+      grid-row-gap: 16px;
+      padding: 16px;
+    }
+    &__item {
+      height: 165px;
+      width: 131px;
+    }
+    &__img {
+      height: 131px;
+    }
+  }
+}

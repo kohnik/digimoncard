@@ -1,0 +1,52 @@
+// BREAKPOINTS
+$min-width: 320px;
+$max-width: 1920px;
+$screen-gap: 20px;
+$xs: 460px;
+$s: 767px;
+$m: 1023px;
+$l: 1440px;
+$xl: 1919px;
+
+// COLORS  - DON'T USE this variables on templates, use variables from "ABSTRACT-COLORS" section
+$_red: #ff0000;
+$_white: #ffffff;
+$_white2: #e5e5e5;
+$_black: #000000;
+$_blue: rgba(21, 127, 251, 1);
+
+$_brown: #140a00;
+$_light-brown: #cd9c4d;
+$_gold: #ffdeab;
+$_dark-gold: #f0b960;
+$_dirty-gold: #98694c;
+$_light-gold: #dba755;
+$_brown-opacity-01: #271908;
+$_brown-light: #2b1f11;
+$_brown-liglt-light: #3f2e19;
+
+// ABSTRACT-COLORS - USE this variables on templates
+$color-main: $_red;
+
+$color-text-link: $_blue;
+$color-text-link-hover: $_black;
+$color-background: $_white;
+$color-border: $_light-brown;
+
+
+$color-text: $_white;
+$color-background-for-elements: $_blue;
+$color-title: #212529;
+$color-block-background: rgba(33, 37, 41, 0.03);
+$color-point-background:  rgba(33, 37, 41, 0.7);
+$color-button-hover: #141754;
+$color-button: #157ffb;
+$color-line: rgba(33, 37, 41, 0.1);
+
+// FONTS
+$font-title: "Lora", serif;
+$font-text: "Oswald", sans-serif;
+$font-Oswald: "Oswald", sans-serif;
+$font-Lora: "Lora", sans-serif;
+$font-Poppins: "Poppins", sans-serif;
+$font-Roboto: "Roboto", sans-serif;

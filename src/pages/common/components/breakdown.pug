@@ -1,0 +1,19 @@
+mixin Breakdown(data)
+
+  section.breakdown
+    .wr-section
+      h2.breakdown__title!=data.title
+      .breakdown__charts
+        .breakdown__container-level.breakdown__chart
+          canvas( id="chart-level" )
+        .breakdown__container-type.breakdown__chart
+          canvas( id="chart-type" )
+
+
+
+
+
+
+
+
+

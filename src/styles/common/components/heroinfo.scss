@@ -1,0 +1,224 @@
+@import "../../utils/import-mixin-and-var-scss";
+
+.hero {
+  .wr-section {
+    max-width: 1300px;
+    @include media-custom-down(1279px) {
+      max-width: 1065px;
+    }
+    @include media-laptop-down {
+      max-width: 765px;
+    }
+    @include media-tablet-down {
+      padding: 0 24px;
+      max-width: 460px;
+    }
+  }
+
+  &__main {
+    display: flex;
+    @include media-tablet-down {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  &__container {
+    height: 256px;
+    min-width: 256px;
+    background: $color-block-background;
+    overflow: hidden;
+    border-radius: 16px;
+    margin-right: 32px;
+    @include media-tablet-down {
+      width: 256px;
+      margin-right: 0;
+      margin-bottom: 40px;
+    }
+  }
+  &__title {
+    font-family: $font-Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 45px;
+    letter-spacing: 0.03em;
+    color: $color-title;
+    margin: 80px 0 40px 0;
+  }
+  &__item-title {
+    font-family: $font-Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.03em;
+    color: $color-title;
+    margin-bottom: 12px;
+  }
+  &__item-description {
+    font-family: $font-Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.03em;
+    color: $color-title;
+    margin: 0 0 12px 40px;
+  }
+  &__description {
+    display: flex;
+    margin-top: 32px;
+    flex-wrap: wrap;
+  }
+  &__description-container {
+    width: 100%;
+    margin-top: 20px;
+  }
+  &__description-product {
+    display: flex;
+    width: 100%;
+    height: 256px;
+    border-radius: 16px;
+    background: $color-block-background;
+    padding: 33px 0 40px 32px;
+  }
+  &__text {
+    display: block;
+    height: 24px;
+    min-width: 272px;
+    font-family: $font-Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 36px;
+    letter-spacing: 0.03em;
+    color: $color-title;
+    margin: 5px 16px 0 0;
+  }
+  &__container-mobile {
+    display: none;
+  }
+  //&__img-mobile {
+  //
+  //}
+  &__definition {
+    display: inline-flex;
+    align-items: center;
+    width: 100%;
+    height: 48px;
+    font-family: $font-Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.03em;
+    color: $color-title;
+    background: $color-block-background;
+    border-radius: 16px;
+    margin-bottom: 40px;
+    padding-left: 32px;
+  }
+  &__button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    min-width: 130px;
+    height: 40px;
+    font-family: $font-Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 21px;
+    color: $color-text;
+    background-color: $color-button;
+    border-radius: 40px;
+    cursor: pointer;
+    text-decoration: none;
+    @include media-laptop-down {
+      width: 45%;
+    }
+  }
+  &__button:hover {
+    background-color: $color-button-hover;
+  }
+  &__buttons-container {
+    width: 100%;
+    @include media-laptop-down {
+      max-width: 500px;
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 auto;
+      min-height: 100px;
+      padding-left: 16px;
+    }
+  }
+
+  &__buttons-container > *:not(:last-child) {
+    margin-right: 16px;
+  }
+
+  @include media-mobile-down {
+    .wr-section {
+      max-width: 357px;
+    }
+    &__title.mobile {
+      display: none;
+    }
+    &__container {
+      display: none;
+    }
+    &__container-mobile {
+      display: flex;
+      align-items: center;
+      margin-top: 40px;
+      margin-bottom: 28px;
+    }
+    &__img {
+      height: 120px;
+      overflow: hidden;
+      border-radius: 16px;
+    }
+    &__title {
+      margin: 0 0 0 10px;
+      font-size: 22px;
+      line-height: 30px;
+      width: 100px;
+    }
+    &__item-title {
+      font-size: 14px;
+      line-height: 16px;
+    }
+    &__item-description {
+      font-size: 14px;
+      line-height: 16px;
+    }
+    &__description-product {
+      padding: 24px 0 28px 24px;
+      max-height: 200px;
+    }
+    &__text {
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 27px;
+    }
+    &__definition {
+      font-size: 14px;
+      line-height: 16px;
+    }
+    &__buttons-container {
+      padding-left: 0;
+      justify-content: space-between;
+    }
+    &__button {
+      width: 48%;
+      font-size: 12px;
+      line-height: 18px;
+    }
+    &__buttons-container > *:not(:last-child) {
+      margin-right: 0;
+    }
+  }
+}

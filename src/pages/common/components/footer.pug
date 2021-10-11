@@ -1,0 +1,45 @@
+mixin Footer(data)
+  footer.footer
+    .wr-section
+      .footer__container-left
+        img.footer__logo(src="img/logo.png", alt='logo')
+        h2.footer__title!=data.title
+        .footer__icons-groups
+          a.footer__icons-link(href="https://twitter.com")
+            svg.footer__icon(role="img")
+              use(xlink:href="img/sprite-svg.svg#" + "twitter")
+          a.footer__icons-link(href="https://discord.com/")
+            svg.footer__icon(role="img")
+              use(xlink:href="img/sprite-svg.svg#" + "discord")
+        .footer__aboutus-container
+          span.footer__aboutus-text!='Digimon Card Database. Developed by'
+            a.footer__aboutus-link.footer__alan(href='')!='Alan'
+          each item in data.aboutUs
+            a.footer__aboutus-link(href='')!=item
+      .footer__container-title
+        img.footer__logo(src="img/logo.png", alt='logo')
+        h2.footer__title!=data.title
+      .footer__container-right
+        .footer__portal-wr
+          each items in data.list
+            .footer__container-portal
+              span.footer__portal-title!=items.title
+              ul.footer__list
+                each item in items.items
+                  li.footer__item
+                    a.footer__item-link(href='')!= item
+        span.footer__corporate-text!=data.corporateText
+      .footer__about-mobile
+        .footer__icons-groups
+          a.footer__icons-link(href="https://twitter.com")
+            svg.footer__icon(role="img")
+              use(xlink:href="img/sprite-svg.svg#" + "twitter")
+          a.footer__icons-link(href="https://discord.com/")
+            svg.footer__icon(role="img")
+              use(xlink:href="img/sprite-svg.svg#" + "discord")
+        .footer__aboutus-container
+          span.footer__aboutus-text!='Digimon Card Database. Developed by'
+            a.footer__aboutus-link.footer__alan(href='')!='Alan'
+          each item in data.aboutUs
+            a.footer__aboutus-link(href='')!=item
+        span.footer__corporate-text.mobile!=data.corporateText

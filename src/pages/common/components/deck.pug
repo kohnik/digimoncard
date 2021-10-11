@@ -1,0 +1,23 @@
+mixin Deck(data)
+
+  section.deck
+    .wr-section
+      .deck__line
+      h2.deck__title!=data.title_first
+      .deck__container-main
+        each _ in Array(10)
+          .deck__card
+            a.deck__link(href="hero.html")
+              .deck__point
+                span.deck__number!='3'
+              img.deck__img(src="./img/mainDeck.png", alt="deck")
+      h2.deck__title!=data.title_second
+      .deck__container-egg
+        each _ in Array(4)
+          .deck__card
+            a.deck__link(href="hero.html")
+              img.deck__img(src="./img/egg.png", alt="egg")
+      .deck__line
+
+
+

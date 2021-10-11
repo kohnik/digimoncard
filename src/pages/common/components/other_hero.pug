@@ -1,0 +1,13 @@
+mixin Other_hero(data)
+  section.other
+    .wr-section
+      .other__container-title
+        h2.other__title!='Decks containing LadyDevimon (BT3-088)'
+        a(href="").other__all!='All Decks Containing BT3-088'
+      .other__container
+        each _ in Array(5)
+          .other__item
+            a.other__link(href="")
+              img.other__img(src="./img/tourney.png", alt="tourney")
+              span.other__text!=data.text
+

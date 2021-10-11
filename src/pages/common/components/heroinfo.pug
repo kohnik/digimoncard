@@ -1,0 +1,29 @@
+mixin HeroInfo(data)
+  section.hero
+    .wr-section
+      h1.hero__title.mobile!=data.title
+      .hero__container-mobile
+        img.hero__img(src='./img/hero.png', alt="hero")
+        h1.hero__title!=data.title
+      .hero__main
+        .hero__container
+          img.hero__img(src='./img/hero.png', alt="hero")
+        .hero__description-product
+          ul.hero__list-titles
+            each item in data.hero_description.title
+              li.hero__item-title!= item
+          ul.hero__list-descriptions
+            each item, index in data.hero_description.description
+              if index === 0 || index === 3 || index === 4
+                li.hero__item-description
+                  a(href="")!=item
+              else
+                li.hero__item-description!= item
+      .hero__description
+        span.hero__text!=data.deck_description
+        .hero__description-container
+          span.hero__definition!=data.definition
+          .hero__buttons-container
+            each item in data.buttons
+              a.hero__button(href='')!=item
+

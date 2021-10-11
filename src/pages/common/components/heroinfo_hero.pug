@@ -1,0 +1,43 @@
+mixin HeroInfo_hero(data)
+  section.hero
+    .wr-section
+      h1.hero__title!=data.title
+      .hero__container-main
+        .hero__container-imghero
+          img.hero__imghero(src='./img/ladyDevimon.png', alt="hero")
+          a.hero__report(href="")!='Report Card Issue'
+        .hero__container-specifications
+          .hero__specifications
+            h2.hero__specifications-text!="8000 DP"
+            .hero__container-class
+              span.hero__class-main!="Purple"
+              span.hero__class!='- Digimon - Ultimate'
+            .hero__container-statistic
+              span.hero__statistic!='BT3-088'
+              span.hero__statistic!='Virus'
+              .hero__statistic-lvl
+                span.hero__lvl!="Level: 5 "
+                span.hero__lvl!='Play: 8 '
+                span.hero__lvl!='Evolution: 3'
+          .hero__container-tags
+            a.hero__tags(href="")!='BT01-03: Release Special Booster Ver.1.5'
+            a.hero__tags(href="")!='Tamer Battle Pack 5'
+            a.hero__tags(href="")!='BT-03: Booster Union Impact'
+          .hero__container-effects
+            .hero__effect
+              h3.hero__effect-title!='Card Effect:'
+              span.hero__effect-text!='[When Digivolving] Trigger (Draw 2 cards from your deck). Then, trash 2 cards in your hand.'
+            .hero__effect
+              h3.hero__effect-title!='Inherited Effect:'
+              span.hero__effect-text!='[Your Turn] [Once Per Turn] When you use an Option card, delete 1 of your opponents level 3 Digimon.'
+      .hero__container-tags.mobile
+        a.hero__tags(href="")!='BT01-03: Release Special Booster Ver.1.5'
+        a.hero__tags(href="")!='Tamer Battle Pack 5'
+        a.hero__tags(href="")!='BT-03: Booster Union Impact'
+      .hero__container-effects.mobile
+        .hero__effect
+          h3.hero__effect-title!='Card Effect:'
+          span.hero__effect-text!='[When Digivolving] Trigger (Draw 2 cards from your deck). Then, trash 2 cards in your hand.'
+        .hero__effect
+          h3.hero__effect-title!='Inherited Effect:'
+          span.hero__effect-text!='[Your Turn] [Once Per Turn] When you use an Option card, delete 1 of your opponents level 3 Digimon.'

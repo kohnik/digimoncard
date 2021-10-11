@@ -1,0 +1,205 @@
+@import "../../utils/import-mixin-and-var-scss";
+
+.footer {
+  padding: 35px 0 72px 0;
+  @include media-laptop-down {
+    padding: 35px 0 42px 0;
+  }
+
+  background-color: $color-block-background;
+  margin-top: 155px;
+  .wr-section {
+    display: flex;
+    justify-content: space-between;
+
+    @include media-laptop-down {
+      padding: 0 72px;
+      max-width: 765px;
+    }
+    @include media-custom-down(1279px) {
+      max-width: 1300px;
+    }
+  }
+  &__icon {
+    width: 28px;
+    height: 32.95px;
+  }
+  &__icons-link {
+    margin-right: 17px;
+    text-decoration: none;
+  }
+  &__title {
+    font-family: $font-Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 21px;
+    color: $color-title;
+    margin-bottom: 20px;
+  }
+  &__icons-groups {
+    margin-bottom: 29px;
+  }
+  &__aboutus-text {
+    font-family: $font-Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 18px;
+    color: $color-title;
+  }
+  &__aboutus-link {
+    font-family: $font-Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 18px;
+    text-decoration: none;
+  }
+  &__aboutus-container {
+    display: flex;
+    flex-direction: column;
+  }
+  &__alan {
+    margin-left: 3px;
+  }
+  &__portal-wr > *:not(:last-child) {
+    margin-right: 55px;
+  }
+  &__container-portal {
+    margin-bottom: 38px;
+  }
+  &__list {
+    margin-top: 10px;
+  }
+  &__item-link {
+    font-family: $font-Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 21px;
+    color: $color-title;
+    text-decoration: none;
+  }
+
+  &__item-link:hover {
+    color: #157ffb;
+    text-decoration: underline;
+  }
+  &__item {
+    margin-bottom: 1.5px;
+  }
+  &__container-right {
+    display: flex;
+    margin-left: 45px;
+    flex-direction: column;
+  }
+  &__portal-wr {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__portal-title {
+    font-family: $font-Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 21px;
+    color: $color-title;
+  }
+  &__about-mobile {
+    display: none;
+  }
+  &__container-title {
+    display: none;
+  }
+  &__corporate-text.mobile {
+    display: none;
+  }
+  &__corporate-text {
+    font-family: $font-Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 8px;
+    line-height: 14px;
+    color: $color-title;
+  }
+
+  @include media-laptop-down {
+    &__portal-wr > *:not(:last-child) {
+      margin-right: 40px;
+    }
+  }
+  @include media-tablet-down {
+    .wr-section {
+      display: flex;
+      flex-direction: column;
+      max-width: 460px;
+      padding: 0 24px;
+    }
+    &__about-mobile {
+      display: block;
+    }
+    &__container-title {
+      display: block;
+    }
+    &__container-left {
+      display: none;
+    }
+    &__container-portal {
+      margin-bottom: 18px;
+    }
+    &__corporate-text {
+      display: none;
+    }
+    &__corporate-text.mobile {
+      display: block;
+      margin-top: 38px;
+    }
+    &__container-right {
+      margin-left: 0;
+    }
+    &__icons-groups {
+      margin-top: 35px;
+      margin-bottom: 6px;
+    }
+    &__portal-wr {
+      margin-bottom: 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-row-gap: 19px;
+    }
+    &__title {
+      margin-bottom: 28px;
+    }
+    @include media-mobile-down {
+      &__title {
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 18px;
+      }
+      &__logo {
+        height: 16px;
+        width: 136px;
+      }
+      &__portal-title {
+        font-size: 12px;
+        line-height: 18px;
+      }
+      &__item-link {
+        font-size: 12px;
+        line-height: 18px;
+      }
+      &__portal-wr > *:not(:last-child) {
+        margin-right: 0;
+      }
+      &__aboutus-link {
+        font-size: 10px;
+        line-height: 18px;
+      }
+      &__aboutus-text {
+        font-size: 10px;
+        line-height: 18px;
+      }
+    }
+  }
+}

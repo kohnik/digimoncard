@@ -1,0 +1,18 @@
+mixin Deck_hero(data)
+
+  section.deck
+    .wr-section
+      .deck__line
+      h2.deck__title!='Similar Cards to LadyDevimon'
+      .deck__container-main
+        each _ in Array(10)
+          .deck__card
+            a.deck__link(href="")
+              img.deck__img(src="./img/mainDeck.png", alt="deck")
+      h2.deck__title!='More from BT01-03: Release Special Booster Ver.1.5'
+      .deck__container-egg
+        each _ in Array(4)
+          .deck__card
+            a.deck__link(href="")
+              img.deck__img(src="./img/egg.png", alt="egg")
+      .deck__line

@@ -1,0 +1,116 @@
+.deck {
+  .wr-section {
+    max-width: 1300px;
+    @include media-custom-down(1279px) {
+      max-width: 1065px;
+    }
+    @include media-laptop-down {
+      max-width: 765px;
+    }
+    @include media-tablet-down {
+      padding: 0 24px;
+      max-width: 460px;
+    }
+
+  }
+  &__title {
+    font-family: $font-Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 36px;
+    letter-spacing: 0.03em;
+    color: $color-title;
+    margin-bottom: 24px;
+  }
+  &__container-main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    row-gap: 13px;
+    column-gap: 20px;
+    grid-auto-flow: dense;
+    min-height: 260px;
+    background-color: $color-block-background;
+    border-radius: 16px;
+    padding: 24px 24px 24px 24px;
+    margin-bottom: 40px;
+  }
+  &__container-egg {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    row-gap: 16px;
+    column-gap: 20px;
+    grid-auto-flow: dense;
+    min-height: 260px;
+    background-color: $color-block-background;
+    border-radius: 16px;
+    padding: 24px 24px 24px 24px;
+  }
+  &__point {
+    position: absolute;
+    top: 7px;
+    left: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: $color-point-background;
+  }
+  &__card {
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+  &__number {
+    font-family: $font-Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 36px;
+    color: $color-text;
+  }
+  &__line {
+    height: 0;
+    left: 72px;
+    top: 664px;
+    border: 1px solid $color-line;
+    margin: 48px 0 64px 0;
+  }
+  @include media-custom-down(1280px) {
+    //.wr-section {
+    //  max-width: 1065px;
+    //}
+  }
+  @include media-mobile-down {
+    .wr-section {
+      max-width: 357px;
+    }
+    &__title {
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 27px;
+    }
+    &__img {
+      height: 183px;
+      width: 131px;
+    }
+    &__card {
+      height: 183px;
+      width: 131px;
+    }
+    .deck__container-main {
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: 16px;
+      grid-row-gap: 16px;
+      padding: 16px;
+    }
+    &__container-egg {
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: 16px;
+      grid-row-gap: 16px;
+      padding: 16px;
+    }
+  }
+}

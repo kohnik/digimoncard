@@ -1,0 +1,308 @@
+@import "../../utils/import-mixin-and-var-scss";
+
+.hero {
+  .wr-section {
+    max-width: 1300px;
+    @include media-custom-down(1279px) {
+      max-width: 1065px;
+    }
+    @include media-laptop-down {
+      max-width: 765px;
+    }
+    @include media-tablet-down {
+      padding: 0 24px;
+      max-width: 460px;
+    }
+    @include media-mobile-down {
+      max-width: 357px;
+    }
+  }
+  &__specifications-text {
+    font-family: $font-Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 0.03em;
+    color: $color-title;
+    margin-bottom: 15px;
+  }
+  &__class-main {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: $font-Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    color: #ffffff;
+    background-color: #6356a5;
+    border-radius: 8px;
+    height: 24px;
+    width: 79px;
+    margin-right: 8px;
+  }
+  &__class {
+    font-family: $font-Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    color: #212529;
+  }
+  &__statistic {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: $font-Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.03em;
+    color: #212529;
+    width: 95.98px;
+    height: 24px;
+    background: #f8f8f9;
+    border-radius: 8px;
+    margin-bottom: 12px;
+  }
+  &__lvl {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: $font-Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.03em;
+    color: #212529;
+    width: 95.98px;
+    height: 24px;
+  }
+  &__statistic-lvl {
+    background: #f8f8f9;
+    border-radius: 4px;
+  }
+  &__tags {
+    margin-bottom: 3px;
+    font-family: $font-Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    text-decoration-line: underline;
+    color: #157ffb;
+  }
+  &__effect {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 56px;
+    background: #6356a5;
+    border-radius: 16px;
+    margin-bottom: 8px;
+    padding-left: 24px;
+  }
+  &__effect-title {
+    font-family: $font-Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: 0.03em;
+    color: #ffffff;
+  }
+  &__effect-text {
+    font-family: $font-Roboto;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: 0.03em;
+    color: #ffffff;
+  }
+  &__report {
+    margin-top: 29px;
+    font-family: $font-Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+  }
+  &__container-main {
+    display: flex;
+  }
+  &__container-effects.mobile {
+    display: none;
+  }
+  &__container-specifications {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    min-width: 290px;
+    max-height: 210px;
+    margin-top: 2px;
+    margin-left: 32px;
+  }
+  &__container-class {
+    margin-bottom: 32px;
+  }
+  &__container-statistic {
+    display: flex;
+    flex-direction: column;
+  }
+  &__container-tags {
+    padding: 8px 0 8px 27px;
+    display: flex;
+    align-self: flex-end;
+    flex-direction: column;
+    background: #f8f8f9;
+    border-radius: 16px;
+    max-height: 120px;
+    width: 53.5%;
+    @include media-custom-down(1279px) {
+      width: 45.5%;
+    }
+  }
+  &__container-tags.mobile {
+    display: none;
+  }
+  &__container-effects {
+    width: 100%;
+    margin-top: 22px;
+  }
+  &__container-imghero {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  @include media-laptop-down {
+    &__container-main {
+      flex-direction: column;
+    }
+    &__container-specifications {
+      max-height: 400px;
+    }
+    &__title {
+      text-align: center;
+    }
+    &__effect {
+      min-height: 90px;
+    }
+    &__tags {
+      font-size: 14px;
+    }
+  }
+  @include media-tablet-down {
+
+    &__imghero {
+      height: 232px;
+      width: 168px;
+    }
+    &__container-imghero {
+      width: 168px;
+    }
+    &__container-main {
+      flex-direction: row;
+    }
+    &__container-effects {
+      display: none;
+    }
+    &__container-effects.mobile {
+      display: block;
+    }
+    &__container-tags {
+      width: 100%;
+    }
+    &__container-statistic {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+    &__specifications-text {
+      font-size: 18px;
+      line-height: 21px;
+    }
+    &__container-specifications {
+      margin-left: 16px;
+      min-width: 0;
+    }
+    &__class {
+      font-size: 14px;
+      line-height: 16px;
+    }
+    &__class-main {
+      font-size: 14px;
+      line-height: 16px;
+    }
+    &__lvl {
+      font-size: 12px;
+      line-height: 14px;
+      width: 67px;
+      height: 24px;
+    }
+    &__statistic {
+      font-size: 12px;
+      line-height: 14px;
+      width: 67px;
+      height: 24px;
+      margin-right: 8px;
+    }
+    &__tags {
+      font-size: 14px;
+      line-height: 20px;
+    }
+    &__effect {
+      min-height: 104px;
+    }
+    &__effect-title {
+      font-size: 14px;
+      line-height: 20px;
+    }
+    &__effect-text {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+  @include media-mobile-down {
+    &__title {
+      margin: 33px 0 10px 0;
+    }
+    &__container-tags.mobile {
+      display: block;
+      margin-top: 24px;
+    }
+    &__container-tags {
+      display: none;
+    }
+    &__imghero{
+      height: 146px;
+      width: 104px;
+    }
+    &__container-imghero {
+      width: 104px;
+    }
+    &__class-main {
+      width: 60px;
+      margin-right: 4px;
+    }
+    &__report {
+      margin-top: 10px;
+      font-size: 12px;
+      line-height: 18px;
+      letter-spacing: 0.03em;
+    }
+    &__lvl {
+      width: 50px;
+    }
+    &__statistic-lvl > *:last-child {
+      width: 75px;
+    }
+  }
+}

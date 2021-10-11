@@ -1,0 +1,12 @@
+mixin Other(data)
+  section.other
+    .wr-section
+      .other__line
+      h2.other__title!=data.title
+      .other__container
+        each _ in Array(5)
+          .other__item
+            a.other__link(href="")
+              img.other__img(src="./img/tourney.png", alt="tourney")
+              span.other__text!=data.text
+
